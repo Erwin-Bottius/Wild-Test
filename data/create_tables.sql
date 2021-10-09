@@ -1,0 +1,10 @@
+BEGIN;
+
+DROP TABLE IF EXISTS "member";
+
+CREATE TABLE "member" (
+  "id" SERIAL PRIMARY KEY,
+  "name" TEXT NOT NULL
+);
+
+COMMIT;
