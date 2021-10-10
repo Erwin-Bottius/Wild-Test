@@ -28,6 +28,7 @@ const App = () => {
   const handleSumbitForm = (event) => {
     event.preventDefault();
     // Requete post à l'API qui ajouter le member en BDD
+    console.log(`${window.location.protocol}//${window.location.host}`);
     axios({
       method: 'post',
       url: 'http://localhost:3000/member',
