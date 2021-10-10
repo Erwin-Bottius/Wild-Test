@@ -1,0 +1,25 @@
+.formContainer{
+  margin-top: 2rem;
+}
+.formTitle{
+  font-size: 2rem;
+}
+.form{
+  margin: 2em 0 4em 0;
+  text-align: center;
+
+  &__label{
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  &__input{
+    font-size: 1rem;
+    height: 2.5rem;
+  }
+  &__button{
+    height: 2.5rem;
+    vertical-align:top ;
+  }
+
+}
