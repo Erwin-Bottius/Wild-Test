@@ -4,7 +4,7 @@ const express = require('express');
 const router = require('./app/router');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 80;
 // cors était nécéssaire pendant le développement
 // app.use(cors({ origin: '*' }));
 // en mise en prod, nous utilisons le dossier static dist dans lequel se retrouve notre app front

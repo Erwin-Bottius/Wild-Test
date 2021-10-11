@@ -16,7 +16,7 @@ const App = () => {
   // Ici on utilise useEffect pour faire requeter l'API et changer le state membersArray
   // avec la réponse de l'api => au premier rendu du composant App
   useEffect(() => {
-    axios.get('http://localhost:3000/members')
+    axios.get(`${window.location.protocol}//${window.location.host}/members`)
       .then((members) => {
         setMembersArray(members.data);
       });
@@ -31,14 +31,14 @@ const App = () => {
     // Requete post à l'API qui ajouter le member en BDD
     axios({
       method: 'post',
-      url: 'http://localhost:3000/member',
+      url: `${window.location.protocol}//${window.location.host}/member`,
       data: {
         newMember: inputValue,
       },
     })
     // Puis on fait une nouvelle requete get pour mettre a jour membersArray
       .then(() => {
-        axios.get('http://localhost:3000/members')
+        axios.get(`${window.location.protocol}//${window.location.host}/members`)
           .then((members) => {
             setMembersArray(members.data);
             setInputValue('');
