@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Header from 'src/components/header';
 import Main from 'src/components/main';
+import Footer from 'src/components/footer';
 import './styles.scss';
 
 // == Composant
@@ -28,7 +29,6 @@ const App = () => {
   const handleSumbitForm = (event) => {
     event.preventDefault();
     // Requete post à l'API qui ajouter le member en BDD
-    console.log(`${window.location.protocol}//${window.location.host}`);
     axios({
       method: 'post',
       url: 'http://localhost:3000/member',
@@ -54,6 +54,7 @@ const App = () => {
         onSubmitForm={handleSumbitForm}
         inputValue={inputValue}
       />
+      <Footer />
     </div>
   );
 };

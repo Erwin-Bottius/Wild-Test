@@ -4,14 +4,22 @@
 }
 
 .list__ul{
-  width: 20rem;
+  width: 600px;
   max-height: 20rem;
+  display: flex;
+  padding: 3%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   overflow-y: auto;
   font-size: 1.2rem;
   margin: auto;
-  border: 1px solid black;
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 10px;
+  box-shadow: 0px 3px 11px -4px #000000;
   &__li{
+    width: 32%;
     background-color: rgb(238, 238, 238);
+    border-radius:3px;
     margin-bottom: 2px;
   }
 }
